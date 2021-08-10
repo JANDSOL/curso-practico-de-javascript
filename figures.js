@@ -1,9 +1,12 @@
 // Square code
-const ladoCuadrado = 5;
-console.log('Los lados del cuadrado miden: ' + ladoCuadrado + 'cm');
+console.group('Cuadrados');
 
-const preimetroCuadrado = ladoCuadrado * 4;
-console.log('El perímetro del cuadrado es: ' + preimetroCuadrado + 'cm');
+function squarePerimeter(side) {
+    return side * 4;
+}
 
-const areaCuadrado = ladoCuadrado ** 2;
-console.log('El área del cuadrado es: ' + areaCuadrado + 'cm2');
+function squareArea(side) {
+    return side ** 2;
+}
+
+console.groupEnd();
