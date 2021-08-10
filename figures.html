@@ -10,9 +10,31 @@
 <script src="./figures.js"></script>
 
 <body>
-    <h1>
-        Figuras Geométricas
-    </h1>
+    <header>
+        <h1>
+            Figuras geométricas
+        </h1>
+        <p>Este es el primer taller del curso práctico de JavaScript</p>
+    </header>
+
+    <section>
+        <h2>Calcula el área y perímetro de un cuadrado</h2>
+        <form action="">
+            <label for="SquareInput">
+                Escribe cuánto mide cada lado de tu cuadrado:
+            </label>
+            <!--onekeydown, disabling enter key.-->
+            <input id="SquareInput" type="number" min="0" step="0.00001" placeholder="Ingresa un número mayor a 0."
+                onkeydown="return (event.keyCode!=13);" />
+            <button type="button" onclick="calculateSquarePerimeter()">
+                Calcular el perímetro
+            </button>
+            <button type="button" onclick="calculateSquareArea()">
+                Calcular el área
+            </button>
+        </form>
+    </section>
+
 </body>
 
 </html>

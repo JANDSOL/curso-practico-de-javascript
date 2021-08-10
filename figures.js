@@ -48,3 +48,27 @@ function circleArea(radius) {
 }
 
 console.groupEnd();
+
+
+// Here I interact whit the HTML.
+function calculateSquarePerimeter() {
+    const input = document.getElementById('SquareInput');
+    const value = input.value;
+    if (value > 0) {
+        const perimeter = squarePerimeter(value);
+        alert(perimeter.toFixed(2));
+    } else {
+        alert('Ingrese un número mayor a 0.');
+    }
+};
+
+function calculateSquareArea() {
+    const input = document.getElementById('SquareInput');
+    const value = input.value;
+    if (value > 0) {
+        const area = squareArea(value);
+        alert(area.toFixed(2));
+    } else {
+        alert('Ingrese un número mayor a 0.');
+    }
+};
