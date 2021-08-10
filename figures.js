@@ -42,18 +42,25 @@ console.groupEnd();
 // Circle code
 console.group('Círculos');
 // Radius
-const circleRadius = 4;
+// const circleRadius = 4;
 // Diameter
-const circleDiameter = circleRadius * 2;
+function circleDiameter(radius) {
+    return radius * 2;
+}
 // PI
 const pi = Math.PI;
 // Circumference
-const circlePerimeter = circleDiameter * pi;
+function circlePerimeter(radius) {
+    const diameter = circleDiameter(radius);
+    return diameter * pi;
+}
 // Area
-const circleArea = (circleRadius ** 2) * pi;
-console.log('El radio del círculo es: ' + circleRadius + 'cm');
-console.log('El diámetro del círculo es: ' + circleDiameter + 'cm');
-console.log('PI es: ' + pi);
-console.log('El perímetro del círculo es: ' + circlePerimeter + 'cm');
-console.log('El área del círculo es: ' + circleArea + 'cm^2');
+function circleArea(radius) {
+    return (radius ** 2) * pi;
+}
+// console.log('El radio del círculo es: ' + circleRadius + 'cm');
+// console.log('El diámetro del círculo es: ' + circleDiameter + 'cm');
+// console.log('PI es: ' + pi);
+// console.log('El perímetro del círculo es: ' + circlePerimeter + 'cm');
+// console.log('El área del círculo es: ' + circleArea + 'cm^2');
 console.groupEnd();
