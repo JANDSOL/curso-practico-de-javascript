@@ -25,11 +25,37 @@
             </label>
             <!--onekeydown, disabling enter key.-->
             <input id="SquareInput" type="number" min="0" step="0.00001" placeholder="Ingresa un número mayor a 0."
-                onkeydown="return (event.keyCode!=13);" />
+                onkeydown="return (event.keyCode!=13);">
             <button type="button" onclick="calculateSquarePerimeter()">
                 Calcular el perímetro
             </button>
             <button type="button" onclick="calculateSquareArea()">
+                Calcular el área
+            </button>
+        </form>
+    </section>
+    <section>
+        <h2>Calcula el área y perímetro de un triángulo</h2>
+        <form action="">
+            <label for="TriangleInput1">
+                Escribe cuanto mide el primer lado de tu triángulo:
+            </label>
+            <input id="TriangleInput1" type="number" min="0" step="0.00001" placeholder="Ingresa un número mayor a 0."
+                onkeydown="return (event.keyCode!=13);">
+            <label for="TriangleInput2">
+                Escribe cuanto mide el segundo lado de tu triángulo:
+            </label>
+            <input id="TriangleInput2" type="number" min="0" step="0.00001" placeholder="Ingresa un número mayor a 0."
+                onkeydown="return (event.keyCode!=13);">
+            <label for="TriangleInputBase">
+                Escribe cuánto mide la base de tu triángulo
+            </label>
+            <input id="TriangleInputBase" type="number" min="0" step="0.00001"
+                placeholder="Ingresa un número mayor a 0." onkeydown="return (event.keyCode!=13);">
+            <button type="button" onclick="calculateTrianglePerimeterArea(false)">
+                Calcular el perímetro
+            </button>
+            <button type="button" onclick="calculateTrianglePerimeterArea(true)">
                 Calcular el área
             </button>
         </form>
