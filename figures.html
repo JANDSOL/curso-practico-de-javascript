@@ -68,15 +68,35 @@
             <label for="TrgIsoscelesInput1">
                 Escribe cuánto miden los dos lados de tu triángulo:
             </label>
-            <input id="TrgIsoscelesInput1" type="number" min="0" step="0.00001" placeholder="Ingresa un número mayor a 0."
-                onkeydown="return (event.keyCode!=13);">
+            <input id="TrgIsoscelesInput1" type="number" min="0" step="0.00001"
+                placeholder="Ingresa un número mayor a 0." onkeydown="return (event.keyCode!=13);">
             <label for="TrgIsoscelesInput2">
                 Escribe cuánto mide la base de tu triángulo:
             </label>
-            <input id="TrgIsoscelesInput2" type="number" min="0" step="0.00001" placeholder="Ingresa un número mayor a 0."
-                onkeydown="return (event.keyCode!=13);">
+            <input id="TrgIsoscelesInput2" type="number" min="0" step="0.00001"
+                placeholder="Ingresa un número mayor a 0." onkeydown="return (event.keyCode!=13);">
             <button type="button" onclick="heightTriangleIsosceles()">
                 Calcular la altura
+            </button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Calcula el diámetro, circunferencia y área de un círculo</h2>
+        <form action="">
+            <label for="CircleInput">
+                Escribe el radio de tu círculo:
+            </label>
+            <input id="CircleInput" type="number" min="0" step="0.00001" placeholder="Ingresa un número mayor a 0."
+                onkeydown="return (event.keyCode!=13);">
+            <button type="button" onclick="calculateCircle('diametro')">
+                Calcular el diámetro
+            </button>
+            <button type="button" onclick="calculateCircle('circunferencia')">
+                Calcular la circunferencia
+            </button>
+            <button type="button" onclick="calculateCircle('area')">
+                Calcular el área
             </button>
         </form>
     </section>

@@ -145,3 +145,30 @@ function heightTriangleIsosceles() {
         validationOfNan.forEach(function (value) { alert(value); });
     }
 };
+
+function calculateCircle(type) {
+    const input = document.getElementById('CircleInput');
+    const value = parseFloat(input.value);
+    if (!Number.isNaN(value)) {
+        if (value > 0) {
+            switch (true) {
+                case (type == 'diametro'):
+                    var diameter = circleDiameter(value);
+                    alert(diameter.toFixed(2));
+                    break;
+                case (type == 'circunferencia'):
+                    var perimeter = circlePerimeter(value);
+                    alert(perimeter.toFixed(2));
+                    break;
+                case (type == 'area'):
+                    var area = circleArea(value);
+                    alert(area.toFixed(2));
+                    break;
+            }
+        } else {
+            alert('El radio del círculo necesita un número mayor a 0.');
+        }
+    } else {
+        alert('El radio del círculo necesita un valor.');
+    }
+};
