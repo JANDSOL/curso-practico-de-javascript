@@ -61,7 +61,7 @@ function calculateSquarePerimeter() {
     if (!Number.isNaN(value)) {
         if (value > 0) {
             const perimeter = squarePerimeter(value);
-            alert(perimeter.toFixed(2));
+            document.getElementById('ShowResSquare').innerHTML = perimeter.toFixed(2);
         } else {
             alert('Ingrese un número mayor a 0.');
         }
@@ -75,8 +75,8 @@ function calculateSquareArea() {
     const value = parseFloat(input.value);
     if (!Number.isNaN(value)) {
         if (value > 0) {
-            var area = squareArea(value);
-            alert(area.toFixed(2));
+            const area = squareArea(value);
+            document.getElementById('ShowResSquare').innerHTML = area.toFixed(2);
         } else {
             alert('Ingrese un número mayor a 0.');
         }
@@ -98,12 +98,12 @@ function calculateTrianglePerimeterArea(area) {
     if (!Number.isNaN(valueSide1) && !Number.isNaN(valueSide2) && !Number.isNaN(valueBase)) {
         if (valueSide1 > 0 && valueSide2 > 0 && valueBase > 0) {
             if (!area) {  // Calculate perimeter
-                var perimeter = trianglePerimeter(valueSide1, valueSide2, valueBase);
-                alert(perimeter.toFixed(2));
+                const perimeter = trianglePerimeter(valueSide1, valueSide2, valueBase);
+                document.getElementById('ShowResTriangle').innerHTML = perimeter.toFixed(2);
             } else {  // Calculate area
                 const height = (valueSide1 + valueSide2) / valueBase;
-                var area = triangleArea(valueBase, height);
-                alert(area.toFixed(2));
+                const area = triangleArea(valueBase, height);
+                document.getElementById('ShowResTriangle').innerHTML = area.toFixed(2);
             }
         } else {
             if (valueSide1 <= 0) { validationOf0.push('El primer lado del triángulo necesita un número mayor a 0.'); }
@@ -132,8 +132,8 @@ function heightTriangleIsosceles() {
     const value2 = parseFloat(input2.value);
     if (!Number.isNaN(value1) && !Number.isNaN(value2)) {
         if (value1 > 0 && value2 > 0) {
-            var height = triangleIsoscelesHeight(value1, value2);
-            alert(height.toFixed(2));
+            const height = triangleIsoscelesHeight(value1, value2);
+            document.getElementById('ShowResTriangleIsosceles').innerHTML = height.toFixed(2);
         } else {
             if (value1 <= 0) { validationOf0.push('Los dos primeros lados del triángulo isósceles necesitan un número mayor a 0.'); }
             if (value2 <= 0) { validationOf0.push('La base del triángulo isósceles necesita un número mayor a 0.'); }
@@ -153,16 +153,16 @@ function calculateCircle(type) {
         if (value > 0) {
             switch (true) {
                 case (type == 'diametro'):
-                    var diameter = circleDiameter(value);
-                    alert(diameter.toFixed(2));
+                    const diameter = circleDiameter(value);
+                    document.getElementById('ShowResCircle').innerHTML = diameter.toFixed(2);
                     break;
                 case (type == 'circunferencia'):
-                    var perimeter = circlePerimeter(value);
-                    alert(perimeter.toFixed(2));
+                    const perimeter = circlePerimeter(value);
+                    document.getElementById('ShowResCircle').innerHTML = perimeter.toFixed(2);
                     break;
                 case (type == 'area'):
-                    var area = circleArea(value);
-                    alert(area.toFixed(2));
+                    const area = circleArea(value);
+                    document.getElementById('ShowResCircle').innerHTML = area.toFixed(2);
                     break;
             }
         } else {
