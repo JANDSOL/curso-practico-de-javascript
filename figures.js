@@ -22,6 +22,10 @@ function triangleArea(base, height) {
     return (base * height) / 2;
 }
 
+function triangleIsoscelesHeight(side1_2, base) {
+    return Math.sqrt(side1_2 ** 2 - (base ** 2 / 4))
+}
+
 console.groupEnd();
 
 
@@ -116,5 +120,28 @@ function calculateTrianglePerimeterArea(area) {
         validationOfNan.forEach(function (value) {
             alert(value);
         });
+    }
+};
+
+function heightTriangleIsosceles() {
+    var validationOf0 = [];
+    var validationOfNan = [];
+    const input1 = document.getElementById('TrgIsoscelesInput1');
+    const input2 = document.getElementById('TrgIsoscelesInput2');
+    const value1 = parseFloat(input1.value);
+    const value2 = parseFloat(input2.value);
+    if (!Number.isNaN(value1) && !Number.isNaN(value2)) {
+        if (value1 > 0 && value2 > 0) {
+            var height = triangleIsoscelesHeight(value1, value2);
+            alert(height.toFixed(2));
+        } else {
+            if (value1 <= 0) { validationOf0.push('Los dos primeros lados del triángulo isósceles necesitan un número mayor a 0.'); }
+            if (value2 <= 0) { validationOf0.push('La base del triángulo isósceles necesita un número mayor a 0.'); }
+            validationOf0.forEach(function (value) { alert(value); });
+        }
+    } else {
+        if (Number.isNaN(value1)) { validationOfNan.push('Los dos primeros lados del triángulo isósceles necesitan un valor.'); }
+        if (Number.isNaN(value2)) { validationOfNan.push('La base del triángulo isósceles necesita un valor.'); }
+        validationOfNan.forEach(function (value) { alert(value); });
     }
 };
